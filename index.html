@@ -1,0 +1,14 @@
+
+<style>
+html,body{margin:0;width:100%;height:100%;background:#05070d;color:#fff}
+body{font-family:Arial,sans-serif;overflow:hidden}
+button{cursor:pointer}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',()=> {
+  document.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+    const target=b.dataset.target;
+    if(target){const e=document.querySelector(target); if(e)e.classList.toggle('active');}
+  }));
+});
+</script>
